@@ -1,11 +1,12 @@
 import React from "react";
 import "./index.css";
-import Dashboard from "./pages/Dashboard";
+//import Dashboard from "./pages/Dashboard";
+import StudentGrades from "./pages/Student Grades/StudentGrades";
 
 function App() {
   return (
     <div>
-      <Dashboard />
+      <StudentGrades />
     </div>
   );
 }
