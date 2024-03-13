@@ -141,7 +141,7 @@ const rows = [
   },
 ];
 
-export default function DataTable() {
+export default function StudGradesTbl() {
   return (
     <div style={{ height: 370, width: "100%" }}>
       <DataGrid
