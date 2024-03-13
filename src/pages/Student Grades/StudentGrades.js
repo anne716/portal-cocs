@@ -10,9 +10,7 @@ import Navbar from "../../surfaces/Navbar";
 import StudGradesTbl from "../../components/Data Display/Table/StudGradesTbl";
 
 export default function StudentGrades() {
-  {
-    /* For select field grade level */
-  }
+  // For select field grade level
   const [gradeLevel, setGradeLevel] = React.useState("");
 
   const handleChange = (event) => {
@@ -29,10 +27,11 @@ export default function StudentGrades() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          mt: 4,
         }}
       >
         <Typography variant="h3" sx={{ color: "#079440", fontWeight: "bold" }}>
-          Report of Grades
+          REPORT OF GRADES
         </Typography>
 
         {/* Select field for grade level */}
