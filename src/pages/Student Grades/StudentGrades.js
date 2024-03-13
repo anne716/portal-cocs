@@ -7,6 +7,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 import Navbar from "../../surfaces/Navbar";
+import StudGradesTbl from "../../components/Data Display/Table/StudGradesTbl";
 
 export default function StudentGrades() {
   {
@@ -21,11 +22,21 @@ export default function StudentGrades() {
   return (
     <div>
       <Navbar />
-      <Box sx={{ flexGrow: 1, p: 3 }}>
-        <Typography variant="h3">Report of Grades</Typography>
+      <Box
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Typography variant="h3" sx={{ color: "#079440", fontWeight: "bold" }}>
+          Report of Grades
+        </Typography>
 
         {/* Select field for grade level */}
-        <FormControl sx={{ m: 1, minWidth: 200 }}>
+        <FormControl sx={{ m: 1, minWidth: 250 }}>
           <InputLabel id="select-grade-level-label">Grade Level</InputLabel>
           <Select
             labelId="select-grade-level-label"
@@ -34,14 +45,26 @@ export default function StudentGrades() {
             label="GradeLevel"
             onChange={handleChange}
           >
-            <MenuItem value={10}>Grade 1</MenuItem>
-            <MenuItem value={20}>Grade 2</MenuItem>
-            <MenuItem value={30}>Grade 3</MenuItem>
-            <MenuItem value={40}>Grade 4</MenuItem>
-            <MenuItem value={50}>Grade 5</MenuItem>
-            <MenuItem value={60}>Grade 6</MenuItem>
+            <MenuItem value={10}>Kinder 1</MenuItem>
+            <MenuItem value={20}>Kinder 2</MenuItem>
+            <MenuItem value={30}>Grade 1</MenuItem>
+            <MenuItem value={40}>Grade 2</MenuItem>
+            <MenuItem value={50}>Grade 3</MenuItem>
+            <MenuItem value={60}>Grade 4</MenuItem>
+            <MenuItem value={70}>Grade 5</MenuItem>
+            <MenuItem value={80}>Grade 6</MenuItem>
           </Select>
         </FormControl>
+      </Box>
+
+      <Box
+        sx={{
+          flexGrow: 1,
+          p: 3,
+        }}
+      >
+        {/* Report of Grades Table */}
+        <StudGradesTbl />
       </Box>
     </div>
   );
